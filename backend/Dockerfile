@@ -28,7 +28,7 @@ WORKDIR /opt
 # Fix path separators and replace application.properties
 #  src/main/resources/application.properties
 RUN rm -f backend/src/main/resources/application.properties
-RUN cp -rf backend/application.properties src/main/resources/application.properties
+RUN cp -rf application.properties src/main/resources/application.properties
 
 # Build the application
 RUN mvn clean package -DskipTests
