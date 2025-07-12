@@ -37,4 +37,5 @@ RUN mvn clean package -DskipTests
 WORKDIR /opt/target/
 
 # This will automatically find and run the JAR file
-ENTRYPOINT ["sh", "-c", "java -jar *.jar"]
+ENTRYPOINT ["java","-jar"]
+CMD ["student-registration-backend-0.0.1-SNAPSHOT.jar"]
