@@ -27,8 +27,8 @@ WORKDIR /opt
 
 # Fix path separators and replace application.properties
 #  src/main/resources/application.properties
-RUN rm -f src/main/resources/application.properties
-RUN cp -rf application.properties src/main/resources/application.properties
+RUN rm -f \backend\src\main\resources\application.properties
+RUN cp -rf \backend\application.properties \backend\src\main\resources\application.properties
 
 # Build the application
 RUN mvn clean package -DskipTests
@@ -39,3 +39,4 @@ WORKDIR /opt/target/
 # This will automatically find and run the JAR file
 ENTRYPOINT ["java","-jar"]
 CMD [ "student-registration-backend-0.0.1-SNAPSHOT.jar" ]
+
