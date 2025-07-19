@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: db-Service
+  name: db-service
 spec:
   selector:
     app:  "easy-crud-db"
