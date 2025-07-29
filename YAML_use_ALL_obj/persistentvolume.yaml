@@ -1,4 +1,4 @@
-apiVersion: vi 
+apiVersion: v1 
 kind: PersistentVolume
 metadata: 
   name:  student-app-pv
