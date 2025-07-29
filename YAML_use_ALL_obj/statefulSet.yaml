@@ -39,4 +39,5 @@ spec:
           mountPath: /var/lib/mysql
       volumes:
         - name: student-db-volume
-          persistentVolumeClaim: student-app-pvc
+          persistentVolumeClaim: 
+             claimName: "student-app-pvc"
