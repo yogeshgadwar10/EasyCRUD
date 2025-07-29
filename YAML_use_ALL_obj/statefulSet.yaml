@@ -15,7 +15,6 @@ spec:
       labels:
         app: student-app-db # has to match .spec.selector.matchLabels
     spec:
-      terminationGracePeriodSeconds: 10
       containers:
       - name: student-app-container
         image: mariadb:latest
