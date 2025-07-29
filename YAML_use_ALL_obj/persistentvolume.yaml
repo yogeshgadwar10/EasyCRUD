@@ -1,0 +1,37 @@
+apiVersion: vi 
+kind: PersistentVolume
+metadata: 
+  name:  student-app-pv
+spec:
+  capacity:
+    storage: 8Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: manual
+  csi:
+    driver: ebs.csi.aws.com
+    volumeHandle: vol-0637fa4b515802b39          # volume_ID
+    fsType: ext4
+    volumeAttributes:
+      storage.kubernates.io/csiProvisionerIdentity: static
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+       - matchExpressions:
+          - {key: jrjjrj, operator: In, values: [""]}
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+ name: student-app-pvc
+spec:
+  storageClassName: manual
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  volumeMode: Filesystem
