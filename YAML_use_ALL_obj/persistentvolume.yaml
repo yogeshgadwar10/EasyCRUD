@@ -20,8 +20,8 @@ spec:
     required:
       nodeSelectorTerms:
        - matchExpressions:
-          - {key: topology.kubernetes.io/zone, operator: In, values: ["us-east-1c"]} # kubectl get node --show-labels
-
+          - {key: topology.kubernetes.io/zone, operator: In, values: ["us-east-1b"]} # kubectl get node --show-labels
+     #=us-east-1b
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
