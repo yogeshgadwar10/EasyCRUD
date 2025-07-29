@@ -20,8 +20,9 @@ spec:
     required:
       nodeSelectorTerms:
        - matchExpressions:
-          - {key: topology.kubernetes.io/zone, operator: In, values: ["us-east-1b"]} # kubectl get node --show-labels
-     #=us-east-1b
+        #  - {key: topology.kubernetes.io/zone, operator: In, values: ["us-east-1b"]} # kubectl get node --show-labels
+   # ip-172-31-35-13
+       - {key: kubernetes.io/hostname, operator: In, values: ["- ip-172-31-35-13"] }
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
