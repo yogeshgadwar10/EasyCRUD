@@ -12,7 +12,7 @@ spec:
   storageClassName: manual
   csi:
     driver: ebs.csi.aws.com
-    volumeHandle: vol-0637fa4b515802b39          # volume_ID
+    volumeHandle: vol-0637fa4b515802b39         # volume_ID
     fsType: ext4
     volumeAttributes:
       storage.kubernates.io/csiProvisionerIdentity: static
