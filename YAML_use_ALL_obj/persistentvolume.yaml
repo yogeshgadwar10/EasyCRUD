@@ -12,7 +12,7 @@ spec:
   storageClassName: manual
   csi:
     driver: ebs.csi.aws.com
-    volumeHandle: vol-0637fa4b515802b39         # volume_ID
+    volumeHandle: vol-05c9f23a447c3889c        # volume_ID
     fsType: ext4
     volumeAttributes:
       storage.kubernates.io/csiProvisionerIdentity: static
@@ -20,9 +20,10 @@ spec:
     required:
       nodeSelectorTerms:
        - matchExpressions:
-        #  - {key: topology.kubernetes.io/zone, operator: In, values: ["us-east-1b"]} # kubectl get node --show-labels
+         - {key: topology.kubernetes.io/zone, operator: In, values: ["us-east-1d"]} # kubectl get node --show-labels
    # ip-172-31-35-13
-       - {key: kubernetes.io/hostname, operator: In, values: ["- ip-172-31-35-13"] }
+      #erator: In, values: ["- ip-172-31-35-13"] }
+      
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
