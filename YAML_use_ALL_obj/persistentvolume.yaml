@@ -23,6 +23,7 @@ spec:
          - {key: topology.kubernetes.io/zone, operator: In, values: ["us-east-1d"]} # kubectl get node --show-labels
    # ip-172-31-35-13
       #erator: In, values: ["- ip-172-31-35-13"] }
+   
       
 ---
 apiVersion: v1
